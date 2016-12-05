@@ -20,6 +20,8 @@ var accessLogStream = FileStreamRotator.getStream({
 // setup the logger
 app.use(morgan('combined', {stream: accessLogStream}))
 
+app.use(express.static('loaderio'));
+
 app.get('/', function (req, res) {
   res.send('hello, world!')
 })
