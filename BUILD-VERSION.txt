@@ -1,5 +1,5 @@
-commit 7b4df4e74871dde75e3710f517e4e30f6006d433
+commit dcf8ad92c5f3e9f83db38f3872e7fd5b22b15bd5
 Author: Jacky Zhao <jacky.zhao@bunchball.com>
-Date:   Sun Dec 4 21:26:37 2016 -0800
+Date:   Sun Dec 4 21:46:26 2016 -0800
 
-    added loderio credential
+    add logging

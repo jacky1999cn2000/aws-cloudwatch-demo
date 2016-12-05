@@ -2,5 +2,7 @@ express:
   image: jacky1999cn2000/aws-cloudwatch-demo:latest
   ports:
     - "80:3000"
+  volumes:
+    - ${HOME}/log:/usr/src/app/log
   working_dir: "/usr/src/app"
   entrypoint: "forever index.js"
