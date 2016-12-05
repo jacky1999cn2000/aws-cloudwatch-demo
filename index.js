@@ -7,8 +7,14 @@ var path = require('path')
 var app = express()
 var logDirectory = path.join(__dirname, 'log')
 
+console.log('logDirectory ', logDirectory);
+
 // ensure log directory exists
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
+try{
+  fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
+}catch(err){
+  console.log('err ',err);
+}
 
 // create a rotating write stream - rotate every minute
 var accessLogStream = FileStreamRotator.getStream({
