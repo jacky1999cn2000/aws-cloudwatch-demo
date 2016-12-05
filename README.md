@@ -6,6 +6,7 @@ A very simple express server with :
   * requests logging - it will put every request into log files (it was configured to create a new log file every minute - for testing CloudWatch's custom logs feature)
   * loader.io setup
   * docker-compose (prod) - mapping container's `/usr/src/app/log` folder back to AMZ Linux's `${HOME}/log`, so we can later use this folder in CloudWatch custom log setup
+  
   ```
   express:
     image: jacky1999cn2000/aws-cloudwatch-demo:latest
