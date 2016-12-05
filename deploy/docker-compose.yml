@@ -1,0 +1,6 @@
+express:
+  image: jacky1999cn2000/aws-cloudwatch-demo:latest
+  ports:
+    - "80:3000"
+  working_dir: "/usr/src/app"
+  entrypoint: "forever index.js"

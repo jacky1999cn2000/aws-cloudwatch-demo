@@ -1,0 +1,14 @@
+version: '2'
+services:
+  express:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    working_dir: "/usr/src/app"
+    entrypoint: "/usr/src/app/node_modules/nodemon/bin/nodemon.js -L --ignore node_modules/ --ignore public/ --ignore .tmp/ index.js"
+networks:
+  default:
+    external:
+      name: jz_playground
